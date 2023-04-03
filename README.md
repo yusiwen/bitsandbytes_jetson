@@ -1,5 +1,5 @@
 # Note: 
-This is a fork of TimDettmers/bitsandbytes, supposed to build on Jetson Xavier using ARM NEON intrinsics. It compiles (g++ 9.4.0, Cuda compilation tools, release 11.4, V11.4.315, Build cuda_11.4.r11.4/compiler.31964100_0) without complaints but builds a malfunctioning library. The [HF example code](https://huggingface.co/blog/hf-bitsandbytes-integration) produces zero weights:
+This is a fork of TimDettmers/bitsandbytes, supposed to build on Jetson Xavier using ARM NEON intrinsics. It compiles without complaints (g++ 9.4.0, Cuda compilation tools, release 11.4, V11.4.315, Build cuda_11.4.r11.4/compiler.31964100_0) but builds a malfunctioning library. The [HF example code](https://huggingface.co/blog/hf-bitsandbytes-integration) produces zero weights:
 
 Output (=before quantitization):
 ```
