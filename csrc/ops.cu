@@ -11,6 +11,7 @@
 #include <cassert>
 // #include <common.h>
 
+namespace BinSearch {}
 
 using namespace BinSearch;
 using std::cout;
