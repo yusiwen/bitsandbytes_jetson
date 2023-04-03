@@ -7,9 +7,9 @@
 #include <kernels.cuh>
 #include <cub/device/device_scan.cuh>
 #include <limits>
-#include <BinSearch.h>
+// #include <BinSearch.h>
 #include <cassert>
-#include <common.h>
+// #include <common.h>
 
 
 using namespace BinSearch;
