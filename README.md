@@ -1,31 +1,6 @@
 # Note: 
-This is a fork of TimDettmers/bitsandbytes, supposed to build on Jetson Xavier using ARM NEON intrinsics. It compiles without complaints (g++ 9.4.0, Cuda compilation tools, release 11.4, V11.4.315, Build cuda_11.4.r11.4/compiler.31964100_0, pytorch 1.14.0a0+44dac51c.nv23.02) but builds a malfunctioning library. The [HF example code](https://huggingface.co/blog/hf-bitsandbytes-integration) produces zero weights:
 
-Output (=before quantitization):
-```
-Parameter containing:
-Parameter(Int8Params([[-0.0271,  0.0165,  0.0010,  ...,  0.0662,  0.1013, -0.1198],
-            [-0.0512,  0.0790,  0.0168,  ...,  0.0641,  0.0217, -0.0149],
-            [ 0.0428, -0.0957,  0.0995,  ...,  0.0269,  0.1067,  0.0185],
-            ...,
-            [ 0.0833, -0.0097,  0.0922,  ..., -0.0274,  0.0309, -0.0728],
-            [-0.0933, -0.0087,  0.0862,  ..., -0.1061, -0.0052, -0.1229],
-            [ 0.0371,  0.0090,  0.1147,  ...,  0.0673,  0.0801, -0.0073]]))
-```
-
-Now calling `int8_model = int8_model.to(0)` to 8bitquantitize and again looking at `int8_model[0].weight`:
-
-```
-Parameter containing:
-Parameter(Int8Params([[  0,  17,   1,  ...,  67, 103,   0],
-            [  0,  81,  17,  ...,  65,  22,   0],
-            [ 44,   0, 101,  ...,  27, 109,  19],
-            ...,
-            [ 85,   0,  94,  ...,   0,  32,   0],
-            [  0,   0,  88,  ...,   0,   0,   0],
-            [ 38,   9, 119,  ...,  70,  83,   0]], device='cuda:0',
-           dtype=torch.int8))
-```
+- [x] ~~This is a fork of TimDettmers/bitsandbytes, supposed to build on Jetson Xavier using ARM NEON intrinsics. It compiles without complaints (g++ 9.4.0, Cuda compilation tools, release 11.4, V11.4.315, Build cuda_11.4.r11.4/compiler.31964100_0, pytorch 1.14.0a0+44dac51c.nv23.02) but builds a malfunctioning library. The [HF example code](https://huggingface.co/blog/hf-bitsandbytes-integration) produces zero weights~~ fixed
 
 
 # bitsandbytes
