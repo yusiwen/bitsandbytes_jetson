@@ -531,7 +531,7 @@ void getColRowStats(half * A, float *rowStats, float *colStats, int *nnz_count_r
 
 }
 
-void doubleRowColQuant(half * A, float *rowStats, float *colStats, char *out_col_normed, char *out_row_normed, int *rowidx, int *colidx, half *val, int *nnz_block_ptr, float threshold, int rows, int cols)
+void doubleRowColQuant(half * A, float *rowStats, float *colStats, int8_t *out_col_normed, int8_t *out_row_normed, int *rowidx, int *colidx, half *val, int *nnz_block_ptr, float threshold, int rows, int cols)
 {
   int threads = 64;
   int items_per_thread = 4;
