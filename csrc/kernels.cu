@@ -2504,7 +2504,7 @@ template <int THREADS, int ITEMS_PER_THREAD, int TILE_ROWS, int TILE_COLS, int S
     {
       // we already pre-normalized the col/row stat:
       // what this does is float/absmax*127 = int8
-			local_quantized_data[j] = (char)(rintf(__half2float(local_data[j])*local_col_stats[j]));
+			local_quantized_data[j] = (int8_t)(rintf(__half2float(local_data[j])*local_col_stats[j]));
     }
 
     __syncthreads();
