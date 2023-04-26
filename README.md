@@ -2,7 +2,7 @@
 
 - [x] ~~This is a fork of TimDettmers/bitsandbytes, supposed to build on Jetson Xavier using ARM NEON intrinsics. It compiles without complaints (g++ 9.4.0, Cuda compilation tools, release 11.4, V11.4.315, Build cuda_11.4.r11.4/compiler.31964100_0, pytorch 1.14.0a0+44dac51c.nv23.02) but builds a malfunctioning library. The [HF example code](https://huggingface.co/blog/hf-bitsandbytes-integration) produces zero weights~~ fixed
 
-Pytests:
+Pytests on Jetson Xavier:
 - [x] test_functional.py: ~~5 failed~~ PASS
 - [ ] test_autograd.py: 96 failed
 - [ ] test_modules.py: 3 failed
